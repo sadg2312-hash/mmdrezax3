@@ -10,6 +10,6 @@ FROM alpine:latest
 RUN apk add --no-cache ca-certificates wget tar bash curl
 WORKDIR /app
 COPY --from=builder /app/proxy .
-RUN mkdir -p /app/data /app/x-ui
+RUN mkdir -p /app/data /app/x
 EXPOSE 2053
 CMD ["./proxy"]
